@@ -1,0 +1,55 @@
+.maps-container {
+	@include outer-container;
+}
+
+.maps-item {
+	margin-bottom: em(16);
+	@include media ($medium-screen-up) {
+		@include span-columns(3);
+		display: inline-block;
+
+
+		&:nth-of-type(4n) {
+			@include omega;
+		}
+
+	}
+
+	figure {
+		margin:0;
+		background: white;
+		border-bottom-left-radius: $base-border-radius;
+		border-bottom-right-radius: $base-border-radius;
+		box-shadow: $base-box-shadow;
+	}
+
+	figcaption {
+		padding: em(8);
+	}
+
+	h2 {
+		font-size: 1.4em;
+	}
+
+	p.address {
+		color: $medium-gray;
+	}
+}
+
+.google-map {
+	display:none;
+	@include media ($medium-screen-up) {
+		display: block;
+		position: relative;
+		padding-bottom: 78.571428571%;
+		height:0;
+		overflow: hidden;
+		& iframe {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		}
+	}
+}

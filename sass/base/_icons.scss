@@ -1,0 +1,9 @@
+// Import
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+//Classes
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}

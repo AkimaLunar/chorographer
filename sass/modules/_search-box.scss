@@ -1,0 +1,40 @@
+.search-box {
+	@include outer-container;
+	@include media ($medium-screen-up) {
+		margin-top: em(100);
+	} 
+
+	h1 {
+		display: block;
+		font-size: 1.4em;
+		text-align: center;
+		font-weight: 400;
+
+		@include media ($medium-screen-up) {
+			@include span-columns(8);
+			@include shift(2);
+			margin-bottom: em(20);
+		}
+	}
+
+	form {
+		@include media ($medium-screen-up) {
+			@include span-columns(8);
+			@include shift(2);
+		}
+	}
+
+	button {
+		float: right;
+		position: relative;
+		z-index: 100;
+		right: -4px;
+		bottom: 54px;
+		background: none;
+		color: $medium-gray;
+
+		span {
+			font-size: 120%;
+		}
+	}
+}

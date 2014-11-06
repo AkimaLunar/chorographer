@@ -1,5 +1,12 @@
 <head>
   <title>chorographer</title>
+  <script>
+	window.onload = function() {
+	var autocomplete = new google.maps.places.Autocomplete(
+	(document.getElementById('autocomplete')),{types: ['geocode'] }
+	);
+	};
+  </script>
 </head>
 
 <body>

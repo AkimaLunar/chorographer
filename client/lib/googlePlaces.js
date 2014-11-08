@@ -4,3 +4,11 @@ GoogleMaps.init({
   'language': 'en',
   'libraries': 'places'
 });
+
+Template.searchBox.rendered = function(){
+		window.onload = function(){
+			var autocomp = new google.maps.places.Autocomplete(
+			(document.getElementById('autocomplete')),{types: ['establishment'] }
+		);
+	};
+};

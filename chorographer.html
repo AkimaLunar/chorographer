@@ -1,22 +1,16 @@
 <head>
   <title>chorographer</title>
-  <script>
+  <!-- <script>
 	window.onload = function() {
-	var autocomplete = new google.maps.places.Autocomplete(
-	(document.getElementById('autocomplete')),{types: ['geocode'] }
-	);
+		var autocomplete = new google.maps.places.Autocomplete(
+			(document.getElementById('autocomplete')),{types: ['establishment'] }
+		);
 	};
-  </script>
+  </script> -->
 </head>
 
 <body>
-<header class="search-box">
-	<h1><strong>Chorography</strong> is the art of describing or mapping a region or district, and by extension such a description or map.</h1>
-	<form action="">
-		<input type="text" placeholder="Search for your favorite place…" id="autocomplete">
-		<button type="submit"><span class="fontawesome-search"></span></button>
-	</form>
-</header>
+{{> searchBox}}
 <main class="maps-container">
 	<ul>
 		{{> map}}
@@ -29,6 +23,16 @@
 </main>
 
 </body>
+
+<template name="searchBox">
+	<header class="search-box">
+		<h1><strong>Chorography</strong> is the art of describing or mapping a region or district, and by extension such a description or map.</h1>
+		<form action="">
+			<input type="text" placeholder="Search for your favorite place…" id="autocomplete">
+			<button type="submit"><span class="fontawesome-search"></span></button>
+		</form>
+	</header>
+</template>
 
 <template name="map">
   <li class="maps-item">

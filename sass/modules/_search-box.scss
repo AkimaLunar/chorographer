@@ -1,7 +1,7 @@
 .search-box {
 	@include outer-container;
 	@include media ($medium-screen-up) {
-		margin-top: em(100);
+		margin-top: em(60);
 	} 
 
 	h1 {
@@ -10,6 +10,19 @@
 		text-align: center;
 		font-weight: 400;
 
+		@include media ($medium-screen-up) {
+			@include span-columns(8);
+			@include shift(2);
+			margin-bottom: em(20);
+		}
+	}
+
+	h3 {
+		display: block;
+		font-size: 1.2em;
+		text-align: center;
+		font-weight: 400;
+		color: transparentize($base-font-color, 0.2);
 		@include media ($medium-screen-up) {
 			@include span-columns(8);
 			@include shift(2);

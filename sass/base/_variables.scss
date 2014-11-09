@@ -27,6 +27,10 @@ $base-spacing: $base-line-height * 1em;
 $base-z-index: 0;
 
 // Colors
+
+$pear: #FFB03B;
+$leaf: #468966;
+
 $blue: #477DCA;
 $dark-gray: #333;
 $medium-gray: #999;
@@ -37,7 +41,7 @@ $light-green: #E6EFC2;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$base-accent-color: $blue;
+$base-accent-color: $leaf;
 
 // Link Colors
 $base-link-color: $base-accent-color;

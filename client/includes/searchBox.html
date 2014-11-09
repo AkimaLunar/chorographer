@@ -1,9 +1,13 @@
 <template name="searchBox">
-	<header class="search-box">
+	<section class="search-box">
 		<h1><strong>Chorography</strong> is the art of describing or mapping a region or district, and by extension such a description or map.</h1>
+		{{#if currentUser}}
 		<form action="">
 			<input type="text" placeholder="Search for your favorite place…" id="autocomplete">
 			<!-- <button type="submit"><span class="fontawesome-search"></span></button> -->
 		</form>
-	</header>
+		{{else}}
+		<h3>Please log in or create an account to add your favorite places to the list.</h3>
+		{{/if}}
+	</section>
 </template>

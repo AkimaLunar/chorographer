@@ -1,0 +1,69 @@
+//Header
+
+header.navigation {
+	width: 100%;
+	background-color: transparentize(white, 0.4);
+	height: 3.2em;
+	padding:em(6);
+}
+
+.navigation-inner {
+	@include outer-container;
+}
+
+.navigation-primary {
+	text-align: center;
+	color: $pear;
+	a {
+		text-decoration: none;
+		color: $pear;
+	}
+	h1 {
+		font-size: 2em;
+		span {
+			padding-right: 0.2em;
+		}
+	}
+
+	@include media ($medium-screen-up) {
+		text-align: left;
+		@include span-columns(6);
+	}
+}
+
+.navigation-signup {
+	text-align: center;
+	@include media ($medium-screen-up) {
+		@include span-columns(6);
+		text-align: right;
+		padding:em(6);
+
+	}
+}
+.accounts-dialog {
+	border: $base-border !important;
+	box-shadow: $base-box-shadow !important;
+}
+
+#login-buttons button {
+	@extend %button;
+}
+
+#login-buttons .login-button,
+.accounts-dialog .login-button {
+  font-family: $base-font-family !important;
+  font-weight: 700;
+  color: transparentize(white, 0.2) !important;
+  background: $base-accent-color !important;
+  border: 1px solid darken($base-accent-color, 6%) !important;
+  border-radius: $base-border-radius !important;
+  @include transition (all .2s ease-in-out);
+}
+#login-buttons .login-button:hover,
+.accounts-dialog .login-button:hover {
+  background: lightnen($base-accent-color, 6%) !important;
+}
+#login-buttons .login-button:active,
+.accounts-dialog .login-button:active {
+  background: lightnen($base-accent-color, 6%) !important;;
+}

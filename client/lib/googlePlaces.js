@@ -1,8 +1,10 @@
-GoogleMaps.init({
-  sensor: false,
-  key: 'AIzaSyCJuGapiMUeZt0NHKILcFj5tC10uACna1E',
-  language: "en",
-  libraries: "places"
+Meteor.startup(function () {
+    GoogleMaps.init({
+    sensor: false,
+    key: 'AIzaSyCJuGapiMUeZt0NHKILcFj5tC10uACna1E',
+    language: "en",
+    libraries: "places"
+  });
 });
 
 window.onload = function(){
@@ -14,7 +16,10 @@ window.onload = function(){
 
   google.maps.event.addListener(autocomplete, 'place_changed', function() {       
     var place = autocomplete.getPlace();
-    Meteor.call("addPlace", place);
+    Meteor.call("addPlace", place,function(error, result) {
+      if (error)
+        return alert(error.reason); 
+    });
   });
 
   console.log('bye from Google');

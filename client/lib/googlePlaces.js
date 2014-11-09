@@ -1,26 +1,23 @@
 Meteor.startup(function () {
-    GoogleMaps.init({
-    sensor: false,
-    key: 'AIzaSyCJuGapiMUeZt0NHKILcFj5tC10uACna1E',
-    language: "en",
-    libraries: "places"
-  });
+    //console.log('loading');
+
+    
 });
 
 window.onload = function(){
-  console.log('hello from Google');
+  //console.log('hello from Google');
 
-  var autocomplete = new google.maps.places.Autocomplete(
-    (document.getElementById('autocomplete')),{ types: ['establishment'] }
-  );
+  // var autocomplete = new google.maps.places.Autocomplete((
+  //     document.getElementById('autocomplete')),{ types: ['establishment'] }
+  // );
 
-  google.maps.event.addListener(autocomplete, 'place_changed', function() {       
-    var place = autocomplete.getPlace();
-    Meteor.call("addPlace", place,function(error, result) {
-      if (error)
-        return alert(error.reason); 
-    });
-  });
+  // google.maps.event.addListener(autocomplete, 'place_changed', function() {       
+  //   var place = autocomplete.getPlace();
+  //   Meteor.call("addPlace", place,function(error, result) {
+  //     if (error)
+  //       return alert(error.reason); 
+  //   });
+  // });
 
-  console.log('bye from Google');
+  //console.log('bye from Google');
 };

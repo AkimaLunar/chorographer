@@ -10,12 +10,12 @@ Tracker.autorun(function() {
 });
 
 Template.body.events({  
-  'submit form': function(event, template) {
-    event.preventDefault();
-    var query = template.$('input[type=text]').val();
-    if (query)
-      Session.set('query', query);
-  }
+  // 'submit form': function(event, template) {
+  //   event.preventDefault();
+  //   var query = template.$('input[type=text]').val();
+  //   if (query)
+  //     Session.set('query', query);
+  // }
 });
 
 Template.body.helpers({  

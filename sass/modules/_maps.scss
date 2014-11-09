@@ -1,9 +1,11 @@
 .maps-container {
+	margin-top: 1em;
 	@include outer-container;
 }
 
 .maps-item {
 	margin-bottom: em(16);
+
 	@include media ($medium-screen-up) {
 		@include span-columns(3);
 		display: inline-block;
@@ -15,7 +17,7 @@
 	}
 
 	figure {
-		height: em(280);
+		height: em(300);
 		margin:0;
 		background: white;
 		border-bottom-left-radius: $base-border-radius;
@@ -26,14 +28,34 @@
 
 	figcaption {
 		padding: em(8);
+		@include clearfix;
 	}
 
 	h2 {
+		margin-top: 0.5em;
 		font-size: 1.4em;
+		width: 100%;
 	}
 
 	p.address {
 		color: $medium-gray;
+	}
+
+	button.delete{
+		color: $light-gray;
+		background: none;
+		border-radius: 50%;
+		height: 2em;
+		width: 1em;
+		text-align: center;
+		float: right;
+
+		span {
+			position: relative;
+			top: -1em;
+			right: 0;
+			cursor: pointer;
+		}
 	}
 }
 

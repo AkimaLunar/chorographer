@@ -6,6 +6,7 @@ Meteor.startup(function () {
 	  address: '3491 19th St San Francisco, CA 94110',
 	  center: '37.760732,-122.421202'
     });
+<<<<<<< HEAD
     Places.insert({
       username: 'chorographer',
       name: 'Crossroads Cafe',
@@ -25,5 +26,7 @@ Meteor.startup(function () {
 	  center: '37.801185, -122.439872'
     });
 
+=======
+>>>>>>> parent of 631fea3... Merge branch 'ft-search'
   }
 });

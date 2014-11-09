@@ -1,11 +1,9 @@
 .maps-container {
-	margin-top: 1em;
 	@include outer-container;
 }
 
 .maps-item {
 	margin-bottom: em(16);
-
 	@include media ($medium-screen-up) {
 		@include span-columns(3);
 		display: inline-block;
@@ -17,7 +15,11 @@
 	}
 
 	figure {
+<<<<<<< HEAD
 		height: em(320);
+=======
+		height: em(280);
+>>>>>>> parent of 631fea3... Merge branch 'ft-search'
 		margin:0;
 		background: white;
 		border-bottom-left-radius: $base-border-radius;
@@ -28,13 +30,14 @@
 
 	figcaption {
 		padding: em(8);
-		@include clearfix;
 	}
 
 	h2 {
+<<<<<<< HEAD
 		margin-top: 0.1em;
+=======
+>>>>>>> parent of 631fea3... Merge branch 'ft-search'
 		font-size: 1.4em;
-		width: 100%;
 	}
 
 	p.address {
@@ -51,6 +54,7 @@
 		margin-bottom: em(4);
 		font-weight: 700;
 	}
+<<<<<<< HEAD
 
 	button.delete{
 		color: $light-gray;
@@ -68,6 +72,8 @@
 			cursor: pointer;
 		}
 	}
+=======
+>>>>>>> parent of 631fea3... Merge branch 'ft-search'
 }
 
 .google-map {

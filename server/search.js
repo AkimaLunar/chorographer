@@ -1,4 +1,5 @@
-Meteor.publish('booksSearch', function(query) {  
+Meteor.publish('booksSearch', function(query) {
+  debugger
   var self = this;
   try {
     var response = HTTP.get('https://www.googleapis.com/books/v1/volumes', {
@@ -8,6 +9,7 @@ Meteor.publish('booksSearch', function(query) {
     });
 
     _.each(response.data.items, function(item) {
+      debugger
       var doc = {
         thumb: item.volumeInfo.imageLinks.smallThumbnail,
         title: item.volumeInfo.title,

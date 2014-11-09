@@ -8,11 +8,10 @@ mrt:googlemaps
 iron:router
 underscore
 fourseven:scss
-<<<<<<< HEAD
 http
 meteorhacks:kadira
 accounts-password
 accounts-ui
 =======
->>>>>>> parent of 631fea3... Merge branch 'ft-search'
+
 

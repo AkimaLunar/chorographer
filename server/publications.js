@@ -4,12 +4,16 @@ Meteor.publish('places', function() {
 
 
 Meteor.methods({
-  addPlace: function (place) {
-  	console.log(place);
+	addPlace: function (place) {
 		Places.insert({
-      name: place.name,
-		  address: place.formatted_address,
-		  center: place.geometry.location.k + ',' + place.geometry.location.B
-	    }); 
-	  }
+			name: place.name,
+			address: place.formatted_address,
+			center: place.geometry.location.k + ',' + place.geometry.location.B
+		}); 
+	},
+
+	deleteMap: function(placeId){
+		Places.remove(placeId);
+
+	}
 });

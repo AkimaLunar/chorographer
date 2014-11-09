@@ -1,23 +1,21 @@
 GoogleMaps.init({
-  'sensor': false,
-  'key': 'AIzaSyCJuGapiMUeZt0NHKILcFj5tC10uACna1E',
-  'language': 'en',
-  'libraries': 'places'
+  sensor: false,
+  key: 'AIzaSyCJuGapiMUeZt0NHKILcFj5tC10uACna1E',
+  language: "en",
+  libraries: "places"
 });
 
-Template.searchBox.rendered = function(){
-		window.onload = function(){
-			var autocomp = new google.maps.places.Autocomplete(
-			(document.getElementById('autocomplete')),{types: ['establishment'] }
-		);
+window.onload = function(){
+  console.log('hello from Google');
 
-		google.maps.event.addListener(autocomp, 'place_changed', function() {
-        
-      var place = autocomp.getPlace();
-      console.log(place);
+  var autocomplete = new google.maps.places.Autocomplete(
+    (document.getElementById('autocomplete')),{ types: ['establishment'] }
+  );
 
-      Meteor.call("addPlace", place);
-    });
+  google.maps.event.addListener(autocomplete, 'place_changed', function() {       
+    var place = autocomplete.getPlace();
+    Meteor.call("addPlace", place);
+  });
 
-	};
+  console.log('bye from Google');
 };

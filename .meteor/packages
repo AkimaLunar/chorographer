@@ -9,4 +9,5 @@ iron:router
 underscore
 fourseven:scss
 http
+meteorhacks:kadira
 

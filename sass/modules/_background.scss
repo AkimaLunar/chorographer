@@ -1,13 +1,13 @@
-html {
+html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background: url('/images/background.png');
-	background-size: cover;
-	background-repeat: no-repeat;
+	
 }
 
 body {
-	margin: 0;
-	padding: 0;
+	background: url('/images/background.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }

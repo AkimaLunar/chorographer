@@ -5,6 +5,7 @@
 
 .maps-item {
 	margin-bottom: em(16);
+
 	@include media ($medium-screen-up) {
 		@include span-columns(3);
 		display: inline-block;

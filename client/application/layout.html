@@ -1,0 +1,28 @@
+<template name="layout">
+<!-- TOP HEADER -->
+<header class="navigation">
+<div class="navigation-inner">
+	<div class="navigation-primary">
+		<a href="/"><h1><span class="fontawesome-map-marker"></span>Chorographer</h1></a>
+	</div>
+	<div class="navigation-signup">
+		{{> loginButtons align="right"}}
+	</div>
+</div>
+</header>
+
+
+<!-- MAIN -->
+{{> yield "top"}}
+{{> yield}}
+
+<!-- FOOTER -->
+<!-- <footer>
+	<div class="navigation-inner">
+		<div class="navigation-primary">
+			<h1>Chorographer</h1>
+		</div>
+	</div>
+</footer> -->
+
+ </template>

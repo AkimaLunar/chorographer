@@ -5,3 +5,11 @@
 
 meteor-platform
 mrt:googlemaps
+iron:router
+underscore
+fourseven:scss
+http
+meteorhacks:kadira
+accounts-password
+accounts-ui
+

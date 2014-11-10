@@ -1,0 +1,5 @@
+.not-found {
+	@include outer-container;
+	text-align: center;
+	margin-top: em(80);
+}

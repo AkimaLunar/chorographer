@@ -1,5 +1,13 @@
-html {
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	
+}
+
+body {
 	background: url('/images/background.png');
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }

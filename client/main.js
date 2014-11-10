@@ -16,5 +16,5 @@ if (Meteor.isClient) {
 			var place = autocomplete.getPlace();
 			Meteor.call("addPlace", place);
 		});
-	}, 1000);
+	}, 3000);
 }

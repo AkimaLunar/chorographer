@@ -1,0 +1,39 @@
+article.place-page {
+	@include outer-container;
+	margin-top: em(60);
+	background: white;
+	box-shadow: $base-box-shadow;
+}
+
+.comments-bounds {
+	@include span-columns(12);
+	padding: em(20);
+}
+
+.comment-box {
+	
+	text-align: center;
+	padding-top: em(16);
+	color: $medium-gray;
+	font-weight: 700;
+}
+.comments {
+	margin-bottom: 1em;
+	border-top: $base-border;
+}
+.comment {
+	padding: em(8);
+	border-bottom: $base-border;
+	
+	h4 {
+		font-size: 1.2em;		
+	}
+	p {
+		font-style: italic;
+	}
+}
+
+span.date {
+	color: $medium-gray;
+	font-size: 0.8em;
+}

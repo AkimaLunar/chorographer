@@ -2,7 +2,7 @@
   <li class="maps-item">
   		<figure>
 
-        <img class="google-maps" src="https://maps.googleapis.com/maps/api/staticmap?center={{center}}&zoom=16&size=300x200&markers=color:red%7C{{center}}">
+        <img class="google-maps" src="https://maps.googleapis.com/maps/api/staticmap?center={{center}}&zoom=16&size=300x200&markers=color:red%7C{{center}}&key=AIzaSyCJuGapiMUeZt0NHKILcFj5tC10uACna1E">
 
   			<figcaption>
           <div class="user-map-controls">
@@ -11,7 +11,7 @@
             <button class="delete"><span class="fontawesome-trash "></span>&nbsp;</button>
             {{/if}}
           </div>
-  				<h2>{{name}}</h2>
+  				<a href="{{pathFor 'placePage'}}"><h2>{{name}}</h2></a>
   				<p class="address">{{address}}</p>
   			</figcaption>
   		</figure>

@@ -1,0 +1,48 @@
+<template name="placePage">
+	<article class="place-page">
+		<iframe
+		height="450"
+		frameborder="0" style="border:0; width: 100%"
+		src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCJuGapiMUeZt0NHKILcFj5tC10uACna1E&q={{formattedName}}">
+		</iframe>
+
+		<section class="comments-bounds">
+			<h1>{{name}}</h1>
+			<p>{{address}}</p>
+
+			<ul class="comments">
+			{{#each comments}}
+				{{> commentItem}}
+			{{/each}}
+			</ul>
+
+			{{#if currentUser}}
+				{{> commentSubmit}}
+			{{else}}
+				<div class="comment-box">
+					<p>Please log in to leave a comment</p>
+				</div>
+			{{/if}}
+		</section>
+
+		
+	</article>
+</template>
+
+<template name="commentItem">
+  <li class="comment">
+    <h4>
+      <span class="author">{{author}}</span>
+      <span data-livestamp="{{submittedText}}" class="date"></span>
+    </h4>
+    <p>{{body}}</p>
+  </li>
+</template>
+
+<template name="commentSubmit">
+	<form name="comment">
+		<label for="body">What do you think about this place?</label>
+		<textarea name="body" id="body" rows="3"></textarea>
+		<button>Add Comment</button>
+	</form>
+</template>

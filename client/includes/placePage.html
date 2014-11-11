@@ -1,21 +1,29 @@
 <template name="placePage">
 	<article class="place-page">
-		<h1>{{name}}</h1>
-		<p>{{address}}</p>
+		<iframe
+		height="450"
+		frameborder="0" style="border:0; width: 100%"
+		src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCJuGapiMUeZt0NHKILcFj5tC10uACna1E&q={{formattedName}}">
+		</iframe>
 
-		<ul class="comments">
-		{{#each comments}}
-			{{> commentItem}}
-		{{/each}}
-		</ul>
+		<section class="comments-bounds">
+			<h1>{{name}}</h1>
+			<p>{{address}}</p>
 
-		{{#if currentUser}}
-			{{> commentSubmit}}
-		{{else}}
-			<div class="comment-box">
-				<p>Please log in to leave a comment</p>
-			</div>
-		{{/if}}
+			<ul class="comments">
+			{{#each comments}}
+				{{> commentItem}}
+			{{/each}}
+			</ul>
+
+			{{#if currentUser}}
+				{{> commentSubmit}}
+			{{else}}
+				<div class="comment-box">
+					<p>Please log in to leave a comment</p>
+				</div>
+			{{/if}}
+		</section>
 
 		
 	</article>

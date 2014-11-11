@@ -1,13 +1,17 @@
 article.place-page {
 	@include outer-container;
 	margin-top: em(60);
-	padding: em(20);
 	background: white;
 	box-shadow: $base-box-shadow;
 }
 
-.comment-box {
+.comments-bounds {
 	@include span-columns(12);
+	padding: em(20);
+}
+
+.comment-box {
+	
 	text-align: center;
 	padding-top: em(16);
 	color: $medium-gray;
@@ -15,7 +19,6 @@ article.place-page {
 }
 .comments {
 	margin-bottom: 1em;
-	@include span-columns(12);
 	border-top: $base-border;
 }
 .comment {

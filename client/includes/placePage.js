@@ -1,6 +1,9 @@
 Template.placePage.helpers({
   comments: function() {
     return Comments.find({postId: this._id});
+  },
+  formattedName: function() {
+  	return encodeURIComponent(this.name);
   }
 });
 

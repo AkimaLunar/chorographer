@@ -1,6 +1,7 @@
 article.place-page {
 	@include outer-container;
 	margin-top: em(60);
+	margin-bottom: em(60);
 	background: white;
 	box-shadow: $base-box-shadow;
 }
